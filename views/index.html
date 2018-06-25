@@ -1,0 +1,33 @@
+{% extends layout %} {% block head_section %} {#- Include something in
+<head /> -#} {% endblock head_section %} {% block content %}
+<section class="hero">
+	<img src="{{ 'hero-bg.jpg'| img_asset }}" alt="">
+</section>
+<div class="container">
+  <section class="row">
+    <h2 class="title">О мероприятии</h2>
+    <div class="col col--md-6">
+      <p class="text text--p2">31 мая прошла годовая сервисной конференция компании Huawei под названием «Russia Channel Service Conference 2018» для партнеров компании Huawei.</p>
+      <p class="text text--p2">В ходе мероприятия специалисты и эксперты Huawei познакомили участников с новыми сервисными решениями компании, рассказали о новых партнерских политиках Huawei, а также, в рамках технических сессий, ответили на различные вопросы гостей.</p>
+      <p class="text text--p2">Это было интересное и познавательное мероприятие материалами которого мы делимся с вами.</p>
+    </div>
+    <div class="col col--md-6">
+      <p class="text text--p2">В трех сессиях были рассмотрены следующие вопросы:</p>
+      <ul>
+        <li class="text text--p2">• Обзор сервисных программ, решений и продуктов;</li>
+        <li class="text text--p2">• Требования и процессы по сервисной сертификации;</li>
+      </ul>
+    </div>
+  </section>
+  {% for session in common.data.sessions %}
+  <section class="session">
+    <h2 class="title">{{ session.title }}</h2>
+    <div class="session__content">
+      {% for item in session.items %}
+      <div class="session__item">{{ item }}</div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+</div>
+{% endblock %} {% block footer_section %} {#- Include something before /body -#} {% endblock footer_section %}
