@@ -24,4 +24,18 @@
 	&--md {
 		font-weight: 500;
 	}
+
+	&--bold {
+		font-weight: 700;
+	}
+
+	&--point {
+		position: relative;
+		padding-left: 15px;
+		&::before {
+			position: absolute;
+			content: '•';
+			left: 0;
+		}
+	}
 }

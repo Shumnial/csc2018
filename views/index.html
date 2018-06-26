@@ -1,33 +1,852 @@
-{% extends layout %} {% block head_section %} {#- Include something in
-<head /> -#} {% endblock head_section %} {% block content %}
-<section class="hero">
-	<img src="{{ 'hero-bg.jpg'| img_asset }}" alt="">
+{% extends layout %} {% block head_section %}
+<header class="affix-top">
+    <div id="hw1_global_nav">
+        <nav>
+            <div class="container">
+                <div id="hw1_logo">
+                    <a href="https://www.huawei.com/ru">
+                        <img src="https://www.huawei.com/Assets/corp/v2/img/huawei_logo.png" alt="Huawei"></a>
+                </div>
+                <div class="nav-contact  hidden-xs  hidden-sm">
+                    <ul class="clearfix">
+                        <li class="">
+                            <span class="icon-nav-icon01"></span>
+                            <a href="javascript:;" onclick="ga('send', 'event', 'navbar', 'b2c');" class="navbar-toggle ">
+                                            Для потребителя
+                                            <em class="hwic_down"></em></a>
+                            <div class="primary-nav-consumer-open  navbar-collapse">
+                                <div class="container">
+                                    <div class="row">
+                                       {#  <div class="col-sm-3">
+                                            <span class="lazy-loaded over" style=""><img class="lazy img-radius" data-original="/mediafiles/MediaFiles/2/6/D/{26DFB14F-D319-4FBB-A141-173583111F2F}p20-hero-small.png" alt="Huawei" src="/mediafiles/MediaFiles/2/6/D/{26DFB14F-D319-4FBB-A141-173583111F2F}p20-hero-small.png"></span>
+                                            <div class="see-more">
+                                                <a href="https://shop.huawei.ru/huawei-p20" onclick="ga('send', 'event', 'navbar', 'b2c', 'p10');" target="_blank">Узнать больше <em class="hwic_right"></em></a>
+                                            </div>
+                                        </div> #}
+                                        <div class="col-sm-10">
+                                            <div class="list-icon">
+                                                <div class="row">
+                                                    <div class="col-sm-4 external-link">
+                                                        <a href="http://consumer.huawei.com/ru/?type=phones" onclick="ga('send', 'event', 'navbar', 'b2c', 'phones');" target="_blank">
+                        <em class="icon-nav-icon03"></em>
+                        <p>Смартфоны<em class="hwic_open-in-new3"></em></p>
+                          
+                      </a>
+                                                    </div>
+                                                    <div class="col-sm-4 external-link">
+                                                        <a href="http://consumer.huawei.com/ru/?type=tablets" onclick="ga('send', 'event', 'navbar', 'b2c', 'PCandTablet');" target="_blank">
+                        <img src="//www-file.huawei.com/-/media/CORPORATE/Local-site/ru/CBG/tablets.png?la=ru-RU">
+                      <p>Планшеты<em class="hwic_open-in-new3"></em></p>
+                        </a>
+                                                    </div>
+                                                    <div class="col-sm-4 external-link">
+                                                        <a href="http://consumer.huawei.com/ru/?type=wearables" onclick="ga('send', 'event', 'navbar', 'b2c', 'Wearables');" target="_blank">
+                        <em class="icon-nav-icon05"></em>
+                      <p>Носимые устройства <em class="hwic_open-in-new3"></em></p>
+                      </a>
+                                                    </div>
+                                                    <div class="col-sm-4 external-link">
+                                                        <a href="http://smarthome.huawei.ru/b2c/" onclick="ga('send', 'event', 'navbar', 'b2c', 'smarthome');" target="_blank">
+                        <em class="icon-nav-icon06"></em>
+                      <p>Интернет<em class="hwic_open-in-new3"></em></p>
+                        </a>
+                                                    </div>
+                                                </div>
+                                                <span class="external-link"><a href="http://consumer.huawei.com/ru/" onclick="ga('send', 'event', 'navbar', 'b2c', 'consumerhome');" target="_blank">Посмотреть&nbsp;<span class="link-red">все товары</span></a><em class="hwic_open-in-new3"></em></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <div class="card-cl2">
+                                                <h3>Поддержка</h3>
+                                                <ul class="clearfix">
+                                                    <li class="external-link"><a href="http://consumer.huawei.com/ru/support/phones/" onclick="ga('send', 'event', 'navbar', 'b2c', 'productsupport');" target="_blank">Служба поддержки<em class="hwic_open-in-new3"></em></a></li>
+                                                    <li class="external-link"><a href="http://consumer.huawei.com/ru/support/service-center/" onclick="ga('send', 'event', 'navbar', 'b2c', 'servicecenters');" target="_blank">Сервис-центры<em class="hwic_open-in-new3"></em></a></li>
+                                                    <li class="external-link"><a href="https://shop.huawei.ru/about-contact-us-ru/" onclick="ga('send', 'event', 'navbar', 'b2c', 'callus');" target="_blank">Контакты<em class="hwic_open-in-new3"></em></a></li>
+                                                </ul>
+                                                <span class="external-link"><a href="http://consumer.huawei.com/ru/support/" nclick="ga('send', 'event', 'navbar', 'b2c', 'supportcenter');" target="_blank"><span class="link-red">Узнать больше </span></a><em class="hwic_open-in-new3"></em></span>
+                                                <div class="bg-support container-fluid">
+                                                    <div class="row">
+                                                        <div class=""></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon-nav-icon02"></span>
+                            <a href="javascript:;" onclick="ga('send', 'event', 'navbar', 'b2b');" class="navbar-toggle ">
+                                            Для бизнеса
+                                            <em class="hwic_down"></em></a>
+                            <div class="primary-nav-enterprise-open  navbar-collapse collapse">
+                                <div class="nav-for-tab">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-sm-6 center-block">
+                                                <ul class="" role="tablist" style="margin: 0 auto;  text-align: center;">
+                                                    <li role="presentation" class="active">
+                                                        <a href="#FOR-ENTERPRISE" aria-controls="FOR-ENTERPRISE" role="tab" data-toggle="tab" onclick="ga('send', 'event', 'navbar', 'b2b', 'enterprisetab');">Для предприятий</a>
+                                                    </li>
+                                                    <li role="presentation">
+                                                        <a href="#FOR-CARRIERS" aria-controls="FOR-CARRIERS" role="tab" data-toggle="tab" onclick="ga('send', 'event', 'navbar', 'b2b', 'carriertab');">Для партнеров</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <!-- Tab panes -->
+                                    <div class="tab-content">
+                                        <div role="tabpanel" class="for-tab-one tab-pane fade in active" id="FOR-ENTERPRISE">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-sm-9">
+                                                        <div class="row">
+                                                            <div class="col-sm-4">
+                                                                <h3>Продукты</h3>
+                                                                <ul>
+                                                                    <li class="external-link"><a href="http://e.huawei.com/ru/products/enterprise-networking/switches?source=corp_comm" onclick="ga('send', 'event', 'navbar', 'b2b', 'ent-switches');" target="_blank">Коммутаторы<em class="hwic_open-in-new3"></em></a></li>
+                                                                    <li class="external-link"><a href="http://e.huawei.com/ru/products/enterprise-networking/routers?source=corp_comm" onclick="ga('send', 'event', 'navbar', 'b2b', 'ent-routers');" target="_blank">Маршрутизаторы<em class="hwic_open-in-new3"></em></a></li>
+                                                                    <li class="external-link"><a href="http://e.huawei.com/ru/products/enterprise-networking/wlan?source=corp_comm" onclick="ga('send', 'event', 'navbar', 'b2b', 'ent-wlan');" target="_blank">WLAN<em class="hwic_open-in-new3"></em></a></li>
+                                                                    <li class="external-link"><a href="http://e.huawei.com/ru/products/cloud-computing-dc/servers?source=corp_comm" onclick="ga('send', 'event', 'navbar', 'b2b', 'ent-servers');" target="_blank">Серверы<em class="hwic_open-in-new3"></em></a></li>
+                                                                    <li class="external-link"><a href="http://e.huawei.com/ru/?source=corp_comm" class="see-all" onclick="ga('send', 'event', 'navbar', 'b2b', 'ent-seeallproduct');" target="_blank">Узнать больше<em class="hwic_open-in-new3"></em></a></li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <h3>Решения</h3>
+                                                                <ul>
+                                                                    <li class="external-link"><a href="http://huaweicloud.ru/ru-ru/" onclick="ga('send', 'event', 'navbar', 'b2b', 'ent-datacenter');" target="_blank">Публичное облако Huawei 3data Cloud<em class="hwic_open-in-new3"></em></a></li>
+                                                                    <li class="external-link"><a href="http://e.huawei.com/ru/solutions/business-needs/data-center?source=corp_comm" onclick="ga('send', 'event', 'navbar', 'b2b', 'ent-datacenter');" target="_blank">Облачный центр хранения данных<em class="hwic_open-in-new3"></em></a></li>
+                                                                    <li class="external-link"><a href="http://e.huawei.com/ru/solutions/business-needs/enterprise-network?source=corp_comm" onclick="ga('send', 'event', 'navbar', 'b2b', 'ent-enterprisenetwork');" target="_blank">Корпоративные сети<em class="hwic_open-in-new3"></em></a></li>
+                                                                    <li class="external-link"><a href="http://e.huawei.com/ru/solutions/business-needs/wireless-private-network?source=corp_comm" onclick="ga('send', 'event', 'navbar', 'b2b', 'ent-wirelessprivate');" target="_blank">Беспроводные частные сети<em class="hwic_open-in-new3"></em></a></li>
+                                                                    <li class="external-link"><a href="http://e.huawei.com/ru/solutions/industries?source=corp_comm" onclick="ga('send', 'event', 'navbar', 'b2b', 'ent-industries');" target="_blank">Решения по отраслям<em class="hwic_open-in-new3"></em></a></li>
+                                                                    <li class="external-link"><a href="http://e.huawei.com/ru/solutions?source=corp_comm" class="see-all" onclick="ga('send', 'event', 'navbar', 'b2b', 'ent-seeallsolutions');" target="_blank">Узнать больше<em class="hwic_open-in-new3"></em></a></li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <h3>Сервисы</h3>
+                                                                <ul>
+                                                                    <li class="external-link"><a href="http://e.huawei.com/ru/services/digital-transformation-journey/advisory-implementation?source=corp_comm" onclick="ga('send', 'event', 'navbar', 'b2b', 'ent-advioryimplementservice');" target="_blank">Службы жизненного цикла ИКТ<em class="hwic_open-in-new3"></em></a></li>
+                                                                    <li class="external-link"><a href="http://e.huawei.com/ru/services/technology-surpport/network?source=corp_comm" onclick="ga('send', 'event', 'navbar', 'b2b', 'ent-supportservice');" target="_blank">Воспользуйтесь технологическими решениями Huawei<em class="hwic_open-in-new3"></em></a></li>
+                                                                    <li class="external-link"><a href="http://e.huawei.com/ru/services/industries-solutions?source=corp_comm" onclick="ga('send', 'event', 'navbar', 'b2b', 'ent-industryservices');" target="_blank">Услуги в отраслевых решениях<em class="hwic_open-in-new3"></em></a></li>
+                                                                    <li class="external-link"><a href="http://e.huawei.com/ru/services?source=corp_comm" class="see-all" onclick="ga('send', 'event', 'navbar', 'b2b', 'ent-seeallservices');" target="_blank">Узнать больше <em class="hwic_open-in-new3"></em></a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <span class="external-link"><a href="http://e.huawei.com/ru/?source=corp_comm" onclick="ga('send', 'event', 'navbar', 'b2b', 'ent-home');" target="_blank">Перейти на сайт <span class="link-red">Enterprise</span></a><em class="hwic_open-in-new3"></em></span>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card-cl2">
+                                                            <h3>Поддержка</h3>
+                                                            <ul class="clearfix">
+                                                                <li class="external-link"><a href="http://support.huawei.com/enterprise/ru/index.html" onclick="ga('send', 'event', 'navbar', 'b2b', 'ent-productsupport');" target="_blank">Поддержка продукта<em class="hwic_open-in-new3"></em></a></li>
+                                                                <li class="external-link"><a href="http://support.huawei.com/enterprise/ru/software/index.html" onclick="ga('send', 'event', 'navbar', 'b2b', 'ent-softwaredownload');" target="_blank">Загрузки<em class="hwic_open-in-new3"></em></a></li>
+                                                                <li class="external-link"><a href="http://forum.huawei.com/enterprise/ru/forum-100101.html" onclick="ga('send', 'event', 'navbar', 'b2b', 'ent-techinicalforum');" target="_blank">ИКТ Клуб <em class="hwic_open-in-new3"></em></a></li>
+                                                                <li class="external-link"><a href="http://support.huawei.com/enterprise/ru/tool/" onclick="ga('send', 'event', 'navbar', 'b2b', 'ent-tools');" target="_blank">Инструменты<em class="hwic_open-in-new3"></em></a></li>
+                                                            </ul>
+                                                            <span class="external-link"><a href="http://support.huawei.com/enterprise/ru/index.html" onclick="ga('send', 'event', 'navbar', 'b2b', 'ent-supprotcenter');" target="_blank"> <span class="link-red">Узнать больше </span></a><em class="hwic_open-in-new3"></em></span>
+                                                            <div class="bg-support container-fluid">
+                                                                <div class="row">
+                                                                    <div></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div role="tabpanel" class="for-tab-one tab-pane fade" id="FOR-CARRIERS">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-sm-4">
+                                                        <h3>Поиск партнера</h3>
+                                                        <ul>
+                                                            <li class="external-link"><a href="http://e.huawei.com/ru/partner/find-a-partner?source=corp_comm" target="_blank">Поиск всех партнеров <em class="hwic_open-in-new3"></em></a></li>
+                                                            <li class="external-link"><a href="http://e.huawei.com/ru/partner/partner-profiles?source=corp_comm" target="_blank">Профили партнеров <em class="hwic_open-in-new3"></em></a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h3>Стать партнером Huawei</h3>
+                                                        <ul>
+                                                            <li class="external-link"><a href="http://e.huawei.com/ru/partner/partner-program?source=corp_comm" target="_blank">Стать партнером Huawei<em class="hwic_open-in-new3"></em></a></li>
+                                                            <li class="external-link"><a href="http://e.huawei.com/ru/partner/partner-program/policy?source=corp_comm" target="_blank">Структура партнерского канала <em class="hwic_open-in-new3"></em></a></li>
+                                                            <li class="external-link"><a href="http://e.huawei.com/ru/partner/become-a-partner?source=corp_comm" target="_blank">Регистрация в системе Huawei <em class="hwic_open-in-new3"></em></a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h3>Партнерский портал</h3>
+                                                        <ul>
+                                                            <li class="external-link"><a href="http://e.huawei.com/ru/partner/partner-zone?source=corp_comm" target="_blank">Инструменты для партнеров<em class="hwic_open-in-new3"></em></a></li>
+                                                            <li class="external-link"><a href="http://support.huawei.com/learning/queryByVistorRole!toTrainingVistorPage?roleType=CPartner" target="_blank">Обучение партнера <em class="hwic_open-in-new3"></em></a></li>
+                                                            <li class="external-link"><a href="http://e.huawei.com/ru/marketing-material?source=corp_comm" target="_blank">Маркетинговые материалы <em class="hwic_open-in-new3"></em></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="clearfix">
+                        <li>
+                            <span class=""></span>
+                            <a href="javascript:;" onclick="ga('send', 'event', 'navbar', 'industryinsights');" class="navbar-toggle ">
+                                            Поддержка
+                                            <em class="hwic_down"></em></a>
+                            <div class="primary-nav-insights-open  navbar-collapse collapse">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <h3>Для пользователя</h3>
+                                            <ul>
+                                                <li class="external-link"><a href="http://consumer.huawei.com/ru/support/index.htm">Служба поддержки<em class="hwic_open-in-new3"></em></a></li>
+                                                <li class="external-link"><a href="http://consumer.huawei.com/ru/support/service-center/index.htm">Сервисные центры<em class="hwic_open-in-new3"></em></a></li>
+                                                <li class="external-link"><a href="https://shop.huawei.ru/about-contact-us-ru/">Контакты<em class="hwic_open-in-new3"></em></a></li>
+                                                <li class="external-link"><a href="http://consumer.huawei.com/ru/support/index.htm" class="see-all">Узнать больше<em class="hwic_open-in-new3"></em></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <h3>Для предприятий</h3>
+                                            <ul>
+                                                <li class="external-link"><a href="http://support.huawei.com/enterprise/?lang=ru">Служба поддержки<em class="hwic_open-in-new3"></em></a></li>
+                                                <li class="external-link"><a href="http://support.huawei.com/enterprise/NewSoftwareApplication.action?version=new">Скачать ПО<em class="hwic_open-in-new3"></em></a></li>
+                                                <li class="external-link"><a href="http://support.huawei.com/enterprise/ru/tool/">Инструменты<em class="hwic_open-in-new3"></em></a></li>
+                                                <li class="external-link"><a href="http://support.huawei.com/enterprise/DocIndexAction!toNewDocIndex">Документация<em class="hwic_open-in-new3"></em></a></li>
+                                                <li class="external-link"><a href="http://support.huawei.com/enterprise/newKnowlegdeAction">База знаний<em class="hwic_open-in-new3"></em></a></li>
+                                                <li class="external-link"><a href="http://support.huawei.com/learning/en/newindex.html">Сертификация<em class="hwic_open-in-new3"></em></a></li>
+                                                <li class="external-link"><a href="http://support.huawei.com/enterprise/lang.jsp?lang=ru&amp;forward=http%3A%2F%2Fsupport.huawei.com%2Fenterprise%2F" class="see-all">Узнать больше <em class="hwic_open-in-new3"></em></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <h3>Для операторов</h3>
+                                            <ul>
+                                                <li class="external-link"><a href="http://support.huawei.com/carrier/?lang=en#click=main1">Служба поддержки<em class="hwic_open-in-new3"></em></a></li>
+                                                <li class="external-link"><a href="http://support.huawei.com/carrier/?lang=en#click=main3">Скачать ПО<em class="hwic_open-in-new3"></em></a></li>
+                                                <li class="external-link"><a href="http://support.huawei.com/carrier/navi?lang=en#col=tool">Инструменты<em class="hwic_open-in-new3"></em></a></li>
+                                                <li class="external-link"><a href="http://support.huawei.com/carrier/?lang=en#click=main2">База знаний<em class="hwic_open-in-new3"></em></a></li>
+                                                <li class="external-link"><a href="http://support.huawei.com/carrier/" class="see-all">Узнать больше <em class="hwic_open-in-new3"></em></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-3 hw1_box_wrap">
+                                            <a href="http://e.huawei.com/ru/get-price-info?source=corp_comm"><span class="lazy-placeholder " style="padding-top: 115.385%;"><img src="" class="img-responsive center-block lazy" alt="" data-original="http://www.huawei.com/Assets/CBG/img/group_nav_support.jpg"></span></a>
+                                            <a href="http://e.huawei.com/ru/get-price-info?source=corp_comm" class="hw1_btn">Запросить стоимость</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="">
+                            <span class=""></span>
+                            <a href="javascript:;" onclick="ga('send', 'event', 'navbar', 'abouthuawei');" class="navbar-toggle ">
+                                            О компании
+                                            <em class="hwic_down"></em></a>
+                            <div class="about-huawei-open navbar-collapse collapse">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <h3>О компании</h3>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <ul>
+                                                        <li class="external-link"><a href="/ru/about-huawei/corporate-information" onclick="ga('send', 'event', 'mobilenav', 'abouthuawei', 'corporateinfo');">Корпоративная информация </a></li>
+                                                        <li class="external-link"><a href="/ru/about-huawei/corporate-governance/corporate-governance" onclick="ga('send', 'event', 'mobilenav', 'abouthuawei', 'governance');">Руководство компании</a></li>
+                                                        <li class="external-link"><a href="/ru/about-huawei/cyber-security" onclick="ga('send', 'event', 'mobilenav', 'abouthuawei', 'cybersecurity');">Информационная безопасность</a></li>
+                                                        <li class="external-link"><a href="http://www.huawei.com/minisite/russia/huaweigci/index.html" onclick="ga('send', 'event', 'mobilenav', 'abouthuawei', 'rugci');">Глобальный индекс сетевого взаимодействия<em class="hwic_open-in-new3"></em></a></li>
+                                                        <li class="external-link"><a href="http://www.huawei.com/minisite/russia/annualreport2017rus/" onclick="ga('send', 'event', 'mobilenav', 'abouthuawei', 'annualreport');">Годовой отчет<em class="hwic_open-in-new3"></em></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <h3>Новости и события</h3>
+                                            <ul>
+                                                <li class="external-link"><a href="http://www.huawei.com/minisite/russia/20anniversary/" onclick="ga('send', 'event', 'mobilenav', 'abouthuawei', '20anniversary');">20 лет вместе с Россией<em class="hwic_open-in-new3"></em></a></li>
+                                                <li class="external-link"><a href="/ru/press-events/news" onclick="ga('send', 'event', 'mobilenav', 'abouthuawei', 'news');">Новости</a></li>
+                                                <li class="external-link"><a href="/ru/press-events" onclick="ga('send', 'event', 'mobilenav', 'abouthuawei', 'presscenter');">Пресс-центр </a></li>
+                                                <li class="external-link"><a href="/ru/newsletter" onclick="ga('send', 'event', 'mobilenav', 'abouthuawei', 'newsletter');">Подписка на рассылку</a></li>
+                                                <li class="external-link"><a href="http://www.huawei.com/ru/contact-us" onclick="ga('send', 'event', 'mobilenav', 'abouthuawei', 'newsletter');">Контакты</a></li>
+                                            </ul>
+                                        </div>
+                                        <!--<div class="col-sm-3">
+                        <h3>Publications</h3>
+                        <ul>
+                          <li><a href="/ru/about-huawei/publications/winwin-magazine">WinWin Magazine</a></li>
+                          <li><a href="/ru/about-huawei/publications/communicate">Communications Magazine</a></li>
+                          <li class="external-link"><a href="http://e.huawei.com/en/publications/global/ict_insights" target="_blank">ICT Insights<em class="hwic_open-in-new3"></em></a></li>
+                        </ul>
+                      </div>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search ">
+                    <a href="javascript:;" class="js-search-btn-open nav-search-btn hidden-xs hidden-sm" data-target="#js-search-input-box">
+                        <span class="hwic_search sear-btn"></span>
+                    </a>
+                    <a href="javascript:;" class="search-btn hidden-xs hidden-sm"><span class="hwic_search"></span></a>
+                    <div class="search-open" id="js-search-input-box">
+                        <div class="overlay-box container-fluid"></div>
+                        <div class="search-box">
+                            <div class="search-input">
+                                <input type="text" name="Search" class="js-search-input-popup" placeholder="Введите запрос" onkeypress="javascript:if(event.keyCode=='13') return search();" autocomplete="off">
+                                <a href="javascript:;" class="hwic_search moblie-search-btn visible-xs visible-sm"></a>
+                            </div>
+                            <a href="javascript:;" class="moblie-search-close js-search-btn-close">
+                                <span class="hwic_cross"></span>
+                            </a>
+                            <a href="javascript:;" class="search-close js-search-btn-close">
+                                <span class="hwic_cross"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hw1_masthead_rightside visible-xs visible-sm">
+                    <ul class="clearfix">
+                        <li class="hw1_search dropdown">
+                            <a href="javascript:;" class="js-search-btn-open hwic_search" data-target="#js-search-input-box"></a>
+                        </li>
+                        <li class="hw1_show_more visible-sm visible-xs">
+                            <a href="javascript:;" class="js-mobile-nav-open-btn" data-target="#hw1_mob_nav_container">
+                                <span class="hwic_dehaze"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div id="hw1_mob_nav_container">
+        <div class="mob_nav_open  visible-xs visible-sm">
+            <ul>
+                <li>
+                    <a href="javascript:;" class="navbar-toggle primary-nav-consumer-mob" data-toggle="collapse" data-target="#primary-nav-consumer-mob" aria-expanded="false" aria-controls="primary-nav-consumer-mob">Для пользователя <em class="hwic_down"></em></a>
+                    <ul class="primary-nav-consumer-mob  navbar-collapse collapse" id="primary-nav-consumer-mob" aria-expanded="true">
+                        <li><a href="http://consumer.huawei.com/ru/?type=phones" onclick="ga('send', 'event', 'mobilenav', 'b2c', 'phones');" target="_blank">Смартфоны</a></li>
+                        <li><a href="http://consumer.huawei.com/ru/?type=tablets" onclick="ga('send', 'event', 'mobilenav', 'b2c', 'PCandTablet');" target="_blank">Планшеты</a></li>
+                        <li><a href="http://consumer.huawei.com/ru/?type=wearables" onclick="ga('send', 'event', 'mobilenav', 'b2c', 'Wearables');" target="_blank">Фитнес-трекеры</a></li>
+                        <li><a href="http://smarthome.huawei.ru/b2c/" onclick="ga('send', 'event', 'mobilenav', 'b2c', 'smarthome');" target="_blank">Интернет</a></li>
+                        <li><a href="http://consumer.huawei.com/ru/support/" onclick="ga('send', 'event', 'mobilenav', 'b2c', 'support');" target="_blank">Поддержка</a></li>
+                        <li class="nav-mob-link">Перейти на <a href="http://consumer.huawei.com/ru/" class="link-red" onclick="ga('send', 'event', 'mobilenav', 'b2c', 'consumerhome');" target="_blank">consumer.huawei.com/ru</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;" class="navbar-toggle primary-nav-enterprise-mob" data-toggle="collapse" data-target="#primary-nav-enterprise-mob" aria-expanded="false" aria-controls="primary-nav-enterprise-mob">Для бизнеса  <em class="hwic_down"></em></a>
+                    <ul class="primary-nav-enterprise-mob  navbar-collapse collapse" id="primary-nav-enterprise-mob" aria-expanded="true">
+                        <li>
+                            <h3>Для предприятий</h3>
+                        </li>
+                        <li>
+                            <a href="http://e.huawei.com/ru/products-solutions-list?productsSolutions=products&amp;source=corp_comm" onclick="ga('send', 'event', 'mobilenav', 'b2b', 'ent-allproducts');" target="_blank">Продукты</a>
+                        </li>
+                        <li>
+                            <a href="http://e.huawei.com/ru/products-solutions-list?productsSolutions=solutions&amp;source=corp_comm" onclick="ga('send', 'event', 'mobilenav', 'b2b', 'ent-allsolutions');" target="_blank">Решения</a>
+                        </li>
+                        <li>
+                            <a href="http://e.huawei.com/ru/services?source=corp_comm" onclick="ga('send', 'event', 'mobilenav', 'b2b', 'ent-allservices');" target="_blank">Сервисы</a>
+                        </li>
+                        <li>
+                            <a href="http://support.huawei.com/enterprise/ru/index.html" onclick="ga('send', 'event', 'mobilenav', 'b2b', 'ent-support');" target="_blank">Поддержка</a>
+                        </li>
+                        <li class="nav-mob-link">Перейти на <a href="http://e.huawei.com/ru/?source=corp_comm" class="link-red" onclick="ga('send', 'event', 'mobilenav', 'b2b', 'ent-home');" target="_blank">e.huawei.com/ru</a>
+                        </li>
+                        <li>
+                            <h3>Для операторов</h3>
+                        </li>
+                        <li>
+                            <a href="http://carrier.huawei.com/en/products" onclick="ga('send', 'event', 'mobilenav', 'b2b', 'car-allproducts');" target="_blank">Продукты</a>
+                        </li>
+                        <li>
+                            <a href="http://carrier.huawei.com/en/solutions" onclick="ga('send', 'event', 'mobilenav', 'b2b', 'car-allsolutions');" target="_blank">Решения</a>
+                        </li>
+                        <li>
+                            <a href="http://carrier.huawei.com/en/services" onclick="ga('send', 'event', 'mobilenav', 'b2b', 'car-allservices');" target="_blank">Сервисы</a>
+                        </li>
+                        <li>
+                            <a href="http://support.huawei.com/carrier/en/hwe/index.html" onclick="ga('send', 'event', 'mobilenav', 'b2b', 'car-support');" target="_blank">Поддержка</a>
+                        </li>
+                        <li class="nav-mob-link">Перейти на <a href="http://carrier.huawei.com/en/" class="link-red" onclick="ga('send', 'event', 'mobilenav', 'b2b', 'car-home');" target="_blank">carrier.huawei.com</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="javascript:;" class="navbar-toggle primary-nav-insights-mob" data-toggle="collapse" data-target="#primary-nav-insights-mob" aria-expanded="false" aria-controls="primary-nav-insights-mob">Поддержка <em class="hwic_down"></em></a>
+                    <ul class="primary-nav-insights-mob navbar-collapse collapse" id="primary-nav-insights-mob" aria-expanded="true">
+                        <li><a href="http://m.huawei.com/rumobile/consumer/support/index.htm" onclick="ga('send', 'event', 'mobilenav', 'support', 'con-support');">Для потребителя</a></li>
+                        <li><a href="http://support.huawei.com/enterprise/?lang=ru" onclick="ga('send', 'event', 'mobilenav', 'support', 'ent-support');" target="_blank">Для предприятий</a></li>
+                        <li><a href="http://support.huawei.com/carrier/?lang=en#click=main1" onclick="ga('send', 'event', 'mobilenav', 'support', 'car-support');" target="_blank">Для операторов</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;" class="navbar-toggle about-huawei-mob" data-toggle="collapse" data-target="#about-huawei-mob" aria-expanded="false" aria-controls="about-huawei-mob">О компании <em class="hwic_down"></em></a>
+                    <ul class="about-huawei-mob navbar-collapse collapse" id="about-huawei-mob" aria-expanded="true">
+                        <li>
+                            <h3>О компании</h3></li>
+                        <li><a href="/ru/about-huawei/corporate-information" onclick="ga('send', 'event', 'mobilenav', 'abouthuawei', 'corporateinfo');">Корпоративная информация </a></li>
+                        <li><a href="/ru/about-huawei/corporate-governance/corporate-governance" onclick="ga('send', 'event', 'mobilenav', 'abouthuawei', 'governance');">Руководство компании</a></li>
+                        <li><a href="/ru/about-huawei/cyber-security" onclick="ga('send', 'event', 'mobilenav', 'abouthuawei', 'cybersecurity');">Информационная безопасность</a></li>
+                        <li><a href="http://www.huawei.com /minisite/russia/huaweigci/index.html" onclick="ga('send', 'event', 'mobilenav', 'abouthuawei', 'rugci');">Глобальный индекс сетевого взаимодействия</a></li>
+                        <li><a href="http://www.huawei.com/minisite/russia/annualreport2016/" onclick="ga('send', 'event', 'mobilenav', 'abouthuawei', 'annualreport');">Годовой отчет</a></li>
+                        <li>
+                            <h3>Новости и события</h3></li>
+                        <li><a href="http://www.huawei.com/minisite/russia/20anniversary/" onclick="ga('send', 'event', 'mobilenav', 'abouthuawei', '20anniversary');">20 лет вместе с Россией</a></li>
+                        <li><a href="/ru/press-events/news" onclick="ga('send', 'event', 'mobilenav', 'abouthuawei', 'news');">Новости</a></li>
+                        <li><a href="/ru/press-events" onclick="ga('send', 'event', 'mobilenav', 'abouthuawei', 'presscenter');">Пресс-центр </a></li>
+                        <li><a href="http://events.huawei.ru/" onclick="ga('send', 'event', 'mobilenav', 'abouthuawei', 'events');" target="_blank">Годовой отчет</a></li>
+                        <li><a href="/ru/newsletter" onclick="ga('send', 'event', 'mobilenav', 'abouthuawei', 'newsletter');">Подписка на рассылку</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="mob_login" id="login_mob" style="display: none;">
+                <a id="header_0_loginUrl_mob" data-id="false"><em class="hwic_lock"></em>
+                    
+                </a>
+            </div>
+            <div class="mob_login" id="logout_mob" style="display: none;">
+                <a id="header_0_logoutUrl_mob" data-id="false">
+                    
+                </a>
+            </div>
+        </div>
+        <div class="nav-posti">
+            <div class="corporate-link-mob mob-corporate-open navbar-collapse collapse" id="corporate-link-mob" aria-expanded="true">
+                <ul>
+                    <li>
+                        <h3>
+                                    <a>
+                                        Корпоративный сайт
+                                        <em class="hwic_to_right" style="display:none;"></em>
+                                    </a>
+                                </h3>
+                        <p>О компании Huawei, пресса, события и многое другое</p>
+                    </li>
+                    <li>
+                        <h3>
+                                    <a href="http://consumer.huawei.com/ru">
+                                        Для потребителей
+                                        <em class="hwic_to_right" style=""></em>
+                                    </a>
+                                </h3>
+                        <p>Смартфоны, планшеты, носимые устройства и многое другое</p>
+                    </li>
+                    <li>
+                        <h3>
+                                    <a href="http://e.huawei.com/ru?source=corp_comm">
+                                        Для предприятий
+                                        <em class="hwic_to_right" style=""></em>
+                                    </a>
+                                </h3>
+                        <p>Продукты, решения и услуги для предприятий</p>
+                    </li>
+                    <li>
+                        <h3>
+                                    <a href="http://carrier.huawei.com/en/" target="_blank">
+                                        Для операторов 
+                                        <em class="hwic_to_right" style=""></em>
+                                    </a>
+                                </h3>
+                        <p>Продукты, решения и услуги для операторов</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="corporate-link-mob mob-worldwide-open navbar-collapse collapse" id="worldwide-link-mob" aria-expanded="true">
+                <div class="worldwide-contact">
+                    <div class="worldwide-language"><span class="hwic_browser"></span>Huawei Global - <a link="/en/" href="javascript:void(0)" style="text-decoration:underline;">English</a></div>
+                    <ul class="clearfix">
+                        <li>
+                            <ul>
+                                <li>
+                                    <em class="icon-icon-australia"></em>
+                                    <span>Australia</span>-
+                                    <a link="/au/" href="javascript:void(0)">English </a>
+                                </li>
+                                <li>
+                                    <em class="icon-icon-republic"></em>
+                                    <span>Belarus</span>-
+                                    <a link="/by/" href="javascript:void(0)">Pусский</a>
+                                </li>
+                                <li>
+                                    <em class="icon-icon-brazil"></em>
+                                    <span>Brazil</span>-
+                                    <a link="/br/" href="javascript:void(0)">Portuguese</a>
+                                </li>
+                                <li>
+                                    <em class="icon-icon-canada"></em>
+                                    <span>Canada</span>-
+                                    <a link="/ca/" href="javascript:void(0)">English </a>
+                                </li>
+                                <li>
+                                    <em class="icon-icon-china"></em>
+                                    <span>China</span>-
+                                    <a link="/cn/" href="javascript:void(0)">简体中文</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li>
+                                    <em class="icon-icon-deutschland"></em>
+                                    <span>Germany</span>-
+                                    <a link="/de/" href="javascript:void(0)">Deutsch</a>
+                                </li>
+                                <li>
+                                    <em class="icon-icon-japan"></em>
+                                    <span>Japan</span>-
+                                    <a link="/jp/" href="javascript:void(0)">日本語</a>
+                                </li>
+                                <li>
+                                    <em class="icon-icon-malaysia"></em>
+                                    <span>Malaysia </span>-
+                                    <a link="/my/" href="javascript:void(0)">English</a>
+                                </li>
+                                <li>
+                                    <em class="icon-icon-mexico"></em>
+                                    <span>Mexico</span>-
+                                    <a link="/mx/" href="javascript:void(0)">Spanish</a>
+                                </li>
+                                <li>
+                                    <em class="icon-icon-myanmar"></em>
+                                    <span>Myanmar</span>-
+                                    <a link="/mm/" href="javascript:void(0)">ျမန္မာ</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li>
+                                    <em class="icon-icon-russia"></em>
+                                    <span>Russia</span>-
+                                    <a link="/ru/" href="javascript:void(0)">русский</a>
+                                </li>
+                                <li>
+                                    <em class="icon-icon-south-africa"></em>
+                                    <span>South Africa</span>-
+                                    <a link="/za/" href="javascript:void(0)">English </a>
+                                </li>
+                                <li>
+                                    <em class="icon-icon-spain"></em>
+                                    <span>Spain</span>-
+                                    <a link="/es/" href="javascript:void(0)">Spanish</a>
+                                </li>
+                                <li>
+                                    <em class="icon-icon-switzerland"></em>
+                                    <span>Switzerland</span>-
+                                    <a link="/ch-en/" href="javascript:void(0)">English </a>
+                                </li>
+                                <li>
+                                    <em class="icon-icon-kingdom"></em>
+                                    <span>Thailand</span>-
+                                    <a link="/th/" href="javascript:void(0)">ภาษาไทย</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li>
+                                    <em class="icon-icon-turkey"></em>
+                                    <span>Turkey</span>-
+                                    <a link="/tr/" href="javascript:void(0)">Türkiye</a>
+                                </li>
+                                <li>
+                                    <em class="icon-icon-united-kingdom"></em>
+                                    <span>United Kingdom</span>-
+                                    <a link="/uk/" href="javascript:void(0)">English </a>
+                                </li>
+                                <li>
+                                    <em class="icon-icon-united-states"></em>
+                                    <span>United States</span>-
+                                    <a link="/us/" href="javascript:void(0)">English </a>
+                                </li>
+                                <li>
+                                    <em class="icon-icon-vietnam"></em>
+                                    <span>Vietnam</span>-
+                                    <a link="/vn/" href="javascript:void(0)">Tiếng Việt</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="mob-nav-corporate">
+            <span><a href="javascript:;" class="navbar-toggle corporate-link-mob" data-toggle="collapse" data-target="#corporate-link-mob" aria-expanded="false" aria-controls="corporate-link-mob">компании<em class="hwic_top"></em></a></span>
+            <ul>
+                <li><span class="hwic_browser"></span><a href="javascript:;" class="navbar-toggle worldwide-link-mob" data-toggle="collapse" data-target="#worldwide-link-mob" aria-expanded="false" aria-controls="worldwide-link-mob">
+                    Русский (Россия)
+                    <em class="hwic_top"></em></a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+{% endblock head_section %} {% block content %}
+<section class="hero section">
+  <img src="{{ 'hero-bg.jpg'| img_asset }}" alt="">
+  <h1>Russia Channel Service Conference 2018</h1>
 </section>
 <div class="container">
-  <section class="row">
+  <section class="row section about">
     <h2 class="title">О мероприятии</h2>
     <div class="col col--md-6">
-      <p class="text text--p2">31 мая прошла годовая сервисной конференция компании Huawei под названием «Russia Channel Service Conference 2018» для партнеров компании Huawei.</p>
+      <p class="text text--p2">31 мая прошла годовая конференция сервисной компании Huawei под названием «<span class="text text--md">Russia Channel Service Conference 2018</span>» для партнеров компании Huawei.</p>
       <p class="text text--p2">В ходе мероприятия специалисты и эксперты Huawei познакомили участников с новыми сервисными решениями компании, рассказали о новых партнерских политиках Huawei, а также, в рамках технических сессий, ответили на различные вопросы гостей.</p>
-      <p class="text text--p2">Это было интересное и познавательное мероприятие материалами которого мы делимся с вами.</p>
+      <p class="text text--p2 text--md">Это было интересное и познавательное мероприятие материалами которого мы делимся с вами.</p>
     </div>
     <div class="col col--md-6">
-      <p class="text text--p2">В трех сессиях были рассмотрены следующие вопросы:</p>
+      <p class="text text--p2 text--md">В трех сессиях были рассмотрены следующие вопросы:</p>
       <ul>
-        <li class="text text--p2">• Обзор сервисных программ, решений и продуктов;</li>
-        <li class="text text--p2">• Требования и процессы по сервисной сертификации;</li>
+        <li class="text text--p2 text--point">Обзор сервисных программ, решений и продуктов;</li>
+        <li class="text text--p2 text--point">Требования и процессы по сервисной сертификации;</li>
+        <li class="text text--p2 text--point">Программы мотивации и вопросы реализации услуг;</li>
+        <li class="text text--p2 text--point">Обучение и сертификация;</li>
+        <li class="text text--p2 text--point">Совместное внедрение проектов;</li>
+        <li class="text text--p2 text--point">Удаленное эксплуатационное сопровождение;</li>
+        <li class="text text--p2 text--point">Платформы, приложения, документация;</li>
+        <li class="text text--p2 text--point">Выступление партнеров, награждение по итогам 2017 г.</li>
       </ul>
     </div>
   </section>
-  {% for session in common.data.sessions %}
-  <section class="session">
-    <h2 class="title">{{ session.title }}</h2>
-    <div class="session__content">
-      {% for item in session.items %}
-      <div class="session__item">{{ item }}</div>
+  <section class="materials section">
+    <h2 class="materials__title">Материалы конференции</h2>
+    <div class="materials__tabs">
+      {% for session in common.data.sessions %}
+      <a class="materials__link" href="{{ session.id }}">{{ session.desktopTitle }}</a>
+      <a class="materials__link materials__link--tablet" href="{{ session.id }}">{{ session.tabletTitle }}</a>
       {% endfor %}
     </div>
+    {% for session in common.data.sessions %}
+    <div class="session {% if session.active %}session--active{% endif %}" data-id="{{ session.id }}">
+      <div class="session__content">
+        {% for item in session.items %}
+        <div class="session__item"><div class="session__img"><svg class="follow__item follow__item--tw">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#i-pdf"></use>
+          </svg></div><a href="#">{{ item }}</a></div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
   </section>
-  {% endfor %}
 </div>
-{% endblock %} {% block footer_section %} {#- Include something before /body -#} {% endblock footer_section %}
+{% endblock %} {% block footer_section %}
+<footer>
+    <div id="footer">
+        <div class="container">
+            <!--手机社交分享-->
+            <ul class="social visible-xs visible-sm">
+            </ul>
+            <div class="footer-nav">
+                <!--PressEvents、Partners、Support、Portals-->
+                <div class="row">
+                    <div class="col-sm-12 col-md-3">
+                        <h3 class="iconfont-flash ">
+                                    Информация
+                                </h3>
+                        <ul class="clearfix">
+                            <li class="external-link">
+                                <a href="/ru/press-events/news" onclick="ga('send', 'event', 'footernav', 'news');" target="_self">
+                                                    Потребителям
+                                                    <em class="hwic_open-in-new3"></em>
+                                                </a>
+                            </li>
+                            <li class="external-link">
+                                <a href="http://e.huawei.com/ru?source=corp_comm" onclick="ga('send', 'event', 'footernav', 'events');" target="_self">
+                                                    Предприятиям
+                                                    <em class="hwic_open-in-new3"></em>
+                                                </a>
+                            </li>
+                            <li class="external-link">
+                                <a href="http://www.huawei.com/ru/carrier/" onclick="ga('send', 'event', 'footernav', '20anniversary');" target="_self">
+                                                    Операторам
+                                                    <em class="hwic_open-in-new3"></em>
+                                                </a>
+                            </li>
+                            <li class="">
+                                <a href="http://www.huawei.com/ru/press-center" onclick="ga('send', 'event', 'footernav', 'annualreport');" target="_self">
+                                                    СМИ
+                                                    
+                                                </a>
+                            </li>
+                            <li class="external-link">
+                                <a href="http://career.huawei.com/recruitment/" onclick="" target="_self">
+                                                    Соискателям
+                                                    <em class="hwic_open-in-new3"></em>
+                                                </a>
+                            </li>
+                            <li class="external-link">
+                                <a href="http://www.huawei.com/minisite/russia/ictclub/" onclick="" target="_self">
+                                                    Экспертам
+                                                    <em class="hwic_open-in-new3"></em>
+                                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 col-md-3">
+                        <h3 class="link-flash">
+                                    О компании
+                                </h3>
+                        <ul class="clearfix">
+                            <li class="external-link">
+                                <a href="/ru/about-huawei/corporate-information" onclick="ga('send', 'event', 'footernav', 'solutionpartner');" target="_self">
+                                                    Корпоративная информация
+                                                    <em class="hwic_open-in-new3"></em>
+                                                </a>
+                            </li>
+                            <li class="external-link">
+                                <a href="/ru/about-huawei/corporate-governance/corporate-governance" onclick="" target="_self">
+                                                    Руководство компании
+                                                    <em class="hwic_open-in-new3"></em>
+                                                </a>
+                            </li>
+                            <li class="external-link">
+                                <a href="/ru/about-huawei/cyber-security" onclick="ga('send', 'event', 'footernav', 'servicepartner');" target="_self">
+                                                    Информационная безопасность
+                                                    <em class="hwic_open-in-new3"></em>
+                                                </a>
+                            </li>
+                            <li class="external-link">
+                                <a href="http://www.huawei.com/minisite/russia/annualreport2017rus/" onclick="ga('send', 'event', 'footernav', 'ruannualreport');" target="_self">
+                                                    Годовой отчет
+                                                    <em class="hwic_open-in-new3"></em>
+                                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 col-md-3">
+                        <h3 class="iconfont-flash ">
+                                    Новости и события
+                                </h3>
+                        <ul class="clearfix">
+                            <li class="external-link">
+                                <a href="/ru/press-events/news" onclick="ga('send', 'event', 'footernav', 'consumersupport');" target="_self">
+                                                    Новости
+                                                    <em class="hwic_open-in-new3"></em>
+                                                </a>
+                            </li>
+                            <li class="external-link">
+                                <a href="http://www.huawei.com/minisite/russia/20anniversary/" onclick="ga('send', 'event', 'footernav', 'enterprisesupport');" target="_blank">
+                                                    20 лет вместе с Россией
+                                                    <em class="hwic_open-in-new3"></em>
+                                                </a>
+                            </li>
+                            <li class="external-link">
+                                <a href="http://events.huawei.ru/" onclick="ga('send', 'event', 'footernav', 'carriersupport');" target="_blank">
+                                                    Мероприятия
+                                                    <em class="hwic_open-in-new3"></em>
+                                                </a>
+                            </li>
+                            <li class="external-link">
+                                <a href="/ru/newsletter" onclick="" target="_self">
+                                                    Подписка на рассылку
+                                                    <em class="hwic_open-in-new3"></em>
+                                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 col-md-2">
+                        <h3 class="iconfont-flash ">
+                                    Обзор отрасли
+                                </h3>
+                        <ul class="clearfix">
+                            <li class="external-link">
+                                <a href="http://www.huawei.com/minisite/russia/better-connected-world/" onclick="ga('send', 'event', 'footernav', 'careers');" target="_self">
+                                                    Мир коммуникаций без границ
+                                                    <em class="hwic_open-in-new3"></em>
+                                                </a>
+                            </li>
+                            <li class="">
+                                <a href="http://www.huawei.com/minisite/russia/5g/" onclick="" target="_self">
+                                                    5G. Путь к миру без границ
+                                                    
+                                                </a>
+                            </li>
+                            <li class="">
+                                <a href="http://www.huawei.com/minisite/russia/huaweigci/index.html" onclick="" target="_self">
+                                                    Индекс сетевого взаимодействия 2017
+                                                    
+                                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--PC社交分享-->
+                    <div class="col-sm-1 hidden-xs hidden-sm">
+                        <ul class="social">
+                            <li><a href="http://www.linkedin.com/company/huawei" class="linkedin hwic_linkedin" onclick="ga('send', 'event', 'footernav', 'linkedin');" target="_blank"></a></li>
+                            <li><a href="https://www.facebook.com/huaweirus/" class="facebook hwic_facebook" onclick="ga('send', 'event', 'footernav', 'facebook');" target="_blank"></a></li>
+                            <li><a href="https://twitter.com/huaweirus" class="twitter hwic_twitter" onclick="ga('send', 'event', 'footernav', 'twitter');" target="_blank"></a></li>
+                            <li><a href="https://www.youtube.com/channel/UChz4KRFfkJMfezuZKoEpa8A" class="youtube hwic_youtube" onclick="ga('send', 'event', 'footernav', 'youtube');" target="_blank"></a></li>
+                            <li><a href="https://www.vk.com/huaweirussiaofficial" class="VK1 hwic_icon_VK1" onclick="ga('send', 'event', 'footernav', 'vk');" target="_blank"></a></li>
+                            <li><a href="https://habrahabr.ru/company/huawei/" class="habrahabr hwic_icon_habrahabr" onclick="ga('send', 'event', 'footernav', 'habrahabr');" target="_blank"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--others-->
+                <div class="others-nav">
+                    <h3 class="iconfont-flash ">
+                                Продукты
+                            </h3>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <ul class="clearfix">
+                                <li class="">
+                                    <a href="http://huaweicloud.ru/ru-ru/" onclick="" target="_self">
+                                                        Публичное облако Huawei 3data Cloud
+                                                        
+                                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-3">
+                            <ul class="clearfix">
+                                <li class="external-link">
+                                    <a href="http://www.honor.ru/" onclick="ga('send', 'event', 'footernav', 'honor');" target="_self">
+                                                        Смартфоны для смелых
+                                                        <em class="hwic_open-in-new3"></em>
+                                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy">
+            <div class="container">
+                <div class="row">
+                    <!--CopyRight-->
+                    <div class="col-sm-4">
+                        <span>
+                            <span id="footer_0_tCopyRight">© 2018 Huawei Technologies Co., Ltd.</span></span>
+                    </div>
+                    <!--外部链接-->
+                    <div class="col-sm-8">
+                        <ul>
+                            <li>
+                                <a href="/ru/contact-us" onclick="" target="_self">
+                                            Контакты
+                                        </a>
+                            </li>
+                            <li>|
+                                <a href="/ru/legal" onclick="" target="_self">
+                                            Условия использования
+                                        </a>
+                            </li>
+                            <li>|
+                                <a href="/ru/privacy-policy" onclick="" target="_self">
+                                            Политика конфиденциальности
+                                        </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+{% endblock footer_section %}

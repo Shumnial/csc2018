@@ -1,9 +1,34 @@
 .session{
+	display: none;
 	margin-bottom: 60px;
+	min-height: 240px;
+
+	&--active {
+		display: block;
+		animation-name: show;
+		animation-duration: 0.5s;
+	}
 
 	&__content {
 		display: flex;
 		flex-wrap: wrap;
+	}
+
+	&__img {
+		position: relative;
+		width: 70px;
+		flex-shrink: 0;
+		height: 100%;
+		margin-right: 20px;
+
+		&::after {
+			position: absolute;
+			content: '';
+			width: 1px;
+			height: 100%;
+			right: 0;
+			background-color: #c5cacb;
+		}
 	}
 
 	&__item {
@@ -11,11 +36,28 @@
 		margin-bottom: 40px;
 		margin-right: 2.90%;
 		width: 31%;
+		display: flex;
+
 		
 		background-color: #e1e8ef;
-		padding: 20px;
+		padding: 10px;
 
 		&:nth-child(3n) {
+			margin-right: 0;
+		}
+
+		svg {
+			position: absolute;
+			fill: @link-color;
+			width: 31px;
+			height: 34px;
+			left: 44%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		@media (max-width: @screen-sm) {
+			width: 100%;
 			margin-right: 0;
 		}
 	}
